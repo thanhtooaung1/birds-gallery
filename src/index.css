@@ -1,0 +1,26 @@
+* {
+  /* background-color: #9fcfff; */
+}
+
+/* .nav-bg {
+  background-color: #7d9cb4;
+} */
+.bird-image {
+  transition: all 0.4s ease;
+}
+
+.bird-image:hover {
+  height: 220px;
+}
+
+.related-bird {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: green;
+  margin-right: 5px;
+}
+
+.link {
+  text-decoration: none;
+}
