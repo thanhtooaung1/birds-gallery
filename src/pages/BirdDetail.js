@@ -10,10 +10,11 @@ const BirdDetail = () => {
     data: bird,
     error,
     isPending,
-  } = useFetch("http://localhost:8000/Tbl_Bird/" + id);
+  } = useFetch("https://birds-json-server.vercel.app/Tbl_Bird/" + id);
 
   const onDelete = () => {
-    fetch("http://localhost:8000/Tbl_Bird/" + id, {
+    if (!window.confirm("Are you sure to delete this image?")) return;
+    fetch("https://birds-json-server.vercel.app/Tbl_Bird/" + id, {
       method: "DELETE",
     }).then((res) => {
       navigate(-1);
@@ -21,11 +22,17 @@ const BirdDetail = () => {
   };
 
   return (
-    <div className="container my-5 py-3">
+    <div className="container my-3">
+      {isPending && <div>Loading...</div>}
+      {error && <div>{error}</div>}
       {bird && (
-        <div className="row">
+        <div className="row pb-5">
           <div className="col-md-6 pt-5">
-            <div className="card p-3">
+            <div
+              className="card p-3"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+            >
               <img
                 src={require(`../${bird.ImagePath}`)}
                 alt=""
@@ -34,15 +41,27 @@ const BirdDetail = () => {
             </div>
           </div>
           <div className="col-md-6 py-5">
-            <h3>
+            <h3 data-aos="fade-up" data-aos-duration="1200">
               {bird.BirdMyanmarName}({bird.BirdEnglishName})
             </h3>
-            <p className="mt-4">{bird.Description}</p>
+            <p className="mt-4" data-aos="fade-up" data-aos-duration="1400">
+              {bird.Description}
+            </p>
             <div className="d-flex mt-5">
-              <Link className="btn btn-danger me-3" onClick={onDelete}>
+              <Link
+                className="btn btn-danger me-3"
+                onClick={onDelete}
+                data-aos="zoom-in"
+                data-aos-duration="1400"
+              >
                 Delete
               </Link>
-              <Link className="btn btn-dark" to="/birds">
+              <Link
+                className="btn btn-dark"
+                to="/birds"
+                data-aos="zoom-in"
+                data-aos-duration="1600"
+              >
                 Back
               </Link>
             </div>

@@ -2,25 +2,118 @@
   /* background-color: #9fcfff; */
 }
 
-/* .nav-bg {
-  background-color: #7d9cb4;
-} */
-.bird-image {
+.nav-bg {
+  background-color: #3f90ce;
+}
+
+.navlink {
+  color: rgb(211, 211, 211);
+  font-weight:500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.navlink:hover {
+  color: white;
+}
+
+.active {
+  color: white;
+}
+
+.data-card {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.19);
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.data-card:hover {
+  margin-top: -8px;
+}
+
+.data-card h4 {
+  font-size: 14px;
+  color: rgb(230, 230, 230);
+  text-align: center;
+  
+}
+
+.data-card div {
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  margin-bottom: 10px;
+  
+}
+
+.card {
+  background-color: #3f90ce !important;
+}
+
+.bird-card {
+  overflow: hidden;
   transition: all 0.4s ease;
 }
 
-.bird-image:hover {
-  height: 220px;
+.image-card {
+  overflow: hidden;
+}
+
+.bird-card img {
+  transition: all 0.4s ease;
+}
+
+.bird-card:hover img {
+  transform: scale(1.2);
+}
+
+.card-title{
+  color: white !important;
+  font-size: 15px;
+}
+
+.card-text {
+  color: rgb(214, 214, 214) !important;
+  
+}
+
+.bird-card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
 }
 
 .related-bird {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  background-color: green;
   margin-right: 5px;
 }
 
 .link {
   text-decoration: none;
+}
+
+.footer{
+  padding: 10px 0px;
+  /* background-color: rgb(56, 56, 56); */
+}
+
+.footer p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.social-link {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgb(187, 187, 187);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 5px;
+  cursor: pointer;
+}
+
+.social-link:hover {
+  background-color: rgb(187, 187, 187);
 }

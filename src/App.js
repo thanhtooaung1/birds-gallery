@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import BirdDetail from "./pages/BirdDetail";
 import BirdsList from "./pages/BirdsList";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/birds" element={<BirdsList />}></Route>
           <Route path="/birds/:id" element={<BirdDetail />}></Route>
         </Routes>
+        <Footer />
       </div>
     </BrowserRouter>
   );
