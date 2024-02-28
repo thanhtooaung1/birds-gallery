@@ -7,20 +7,18 @@ const useFetch = (url) => {
 
   useEffect(() => {
     setIsPending(true);
-    setTimeout(() => {
-      fetch(url)
-        .then((res) => res.json())
-        .then((data) => {
-          setIsPending(false);
-          setError(null);
-          setData(data);
-        })
-        .catch((error) => {
-          setIsPending(false);
-          setError(error.message);
-          setData(null);
-        });
-    }, 2000);
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        setIsPending(false);
+        setError(null);
+        setData(data);
+      })
+      .catch((error) => {
+        setIsPending(false);
+        setError(error.message);
+        setData(null);
+      });
   }, []);
 
   return { data, error, isPending };
