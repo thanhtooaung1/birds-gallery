@@ -20,9 +20,7 @@ const Footer = () => {
         </div>
         <p className="text-secondary text-center">
           © All rights reserved by{" "}
-          <span style={{ fontWeight: "bold", color: "#3f90ce" }}>
-            WordPress River
-          </span>
+          <span style={{ fontWeight: "bold", color: "#3f90ce" }}>Lucifer</span>
         </p>
       </div>
     </div>

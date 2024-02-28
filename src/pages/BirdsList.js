@@ -1,5 +1,6 @@
 import useFetch from "../hooks/useFetch";
 import BirdCard from "../components/BirdCard";
+import Loading from "../components/Loading";
 
 const BirdsList = () => {
   const {
@@ -11,7 +12,7 @@ const BirdsList = () => {
   return (
     <div className="container py-3 my-3">
       <h3>Birds</h3>
-      {isPending && <div>Loading...</div>}
+      {isPending && <Loading />}
       {error && <div>{error}</div>}
       {birds && (
         <div class="row row-cols-1 row-cols-md-4 g-4 mt-3">

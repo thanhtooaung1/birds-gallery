@@ -1,6 +1,7 @@
 import React from "react";
 import useFetch from "../hooks/useFetch";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import Loading from "../components/Loading";
 
 const BirdDetail = () => {
   const { id } = useParams();
@@ -23,7 +24,7 @@ const BirdDetail = () => {
 
   return (
     <div className="container my-3">
-      {isPending && <div>Loading...</div>}
+      {isPending && <Loading />}
       {error && <div>{error}</div>}
       {bird && (
         <div className="row pb-5">

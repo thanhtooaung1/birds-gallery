@@ -117,3 +117,10 @@
 .social-link:hover {
   background-color: rgb(187, 187, 187);
 }
+
+.loading {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
