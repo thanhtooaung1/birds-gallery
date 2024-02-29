@@ -74,6 +74,9 @@
 
 .card-text {
   color: rgb(214, 214, 214) !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; 
   
 }
 
